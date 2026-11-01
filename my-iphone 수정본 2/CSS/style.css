@@ -1,0 +1,300 @@
+/* 아이폰 외형 */
+.iphone {
+  width: 300px;
+  height: 600px;
+  background-color: #222;
+  border: 8px solid #111;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 기본 여백 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 웹페이지 전체 */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8e8e8;
+}
+
+/* 상태 표시줄 */
+.status-bar {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  right: 20px;
+  height: 20px;
+  z-index: 7;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* 현재 시간 */
+.status-time {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* 상태 아이콘 영역 */
+.status-icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* 통신 신호 */
+.signal {
+  font-size: 10px;
+}
+
+/* Wi-Fi */
+.wifi {
+  font-size: 12px;
+}
+
+/* 배터리 */
+.battery {
+  font-size: 10px;
+}
+
+/* 다이내믹 아일랜드 */
+.dynamic-island {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100px;
+  height: 28px;
+
+  background-color: #000;
+  border-radius: 20px;
+  z-index:6;
+}
+
+/* 홈 인디케이터 */
+.home-indicator {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100px;
+  height: 4px;
+
+  background-color: white;
+  border-radius: 10px;
+  z-index: 4;
+}
+
+/* 화면 꺼짐 상태 */
+.screen-off {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+
+  background-color: #000;
+  cursor: pointer;
+}
+
+/* 홈 화면 */
+.home-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: none;
+
+  background-color: #8a9bb0;
+}
+
+/* 잠금 화면 */
+.lock-screen {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #26384d;
+  color: white;
+}
+
+/* 날짜 */
+.lock-date {
+  margin-top: 60px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* 시계 */
+.lock-clock {
+  margin-top: 5px;
+  font-size: 82px;
+  font-weight: 300;
+  letter-spacing: -3px;
+}
+
+/* 하단 버튼 영역 */
+.lock-bottom {
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0 25px;
+}
+
+/* 버튼 */
+.lock-button {
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+
+  cursor: pointer;
+}
+
+/* 암호 입력 화면 */
+.passcode-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #26384d;
+  color: white;
+}
+
+/* 암호 입력 화면 등장 모션 */
+@keyframes passcodeEnter {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.passcode-screen.enter {
+  animation: passcodeEnter 0.35s ease-in-out forwards;
+}
+
+/* 암호 입력 제목 */
+.passcode-title {
+  margin-top: 110px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* 암호 입력 표시 */
+.passcode-dots {
+  display: flex;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.passcode-dots span {
+  width: 10px;
+  height: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+/* 암호 안내 문구 */
+.passcode-message {
+  margin-top: 20px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* 숫자 키패드 */
+.passcode-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 58px);
+  gap: 14px 17px;
+  margin-top: 35px;
+}
+
+.passcode-keypad button {
+  width: 58px;
+  height: 58px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.12);
+  color: white;
+
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.passcode-keypad .empty {
+  visibility: hidden;
+}
+
+.passcode-keypad .delete-button {
+  font-size: 12px;
+}
+
+/* 암호 입력 화면 하단 문구 */
+.passcode-bottom {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+}
+
+.passcode-bottom button {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/* 암호 입력 원 좌우 흔들림 */
+@keyframes shake {
+    0%, 100% {
+    transform: translateX(0);
+    }
+    25% {
+     transform: translateX(-8px);
+    }
+    75% {
+    transform: translateX(8px);
+    }
+}
+
+.passcode-dots.shake {
+  animation: shake 0.3s ease-in-out;
+}

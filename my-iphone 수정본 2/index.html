@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my iphone simulator</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <div class="iphone">
+  
+
+    <!-- 상태 표시줄 -->
+     <div class="status-bar">
+
+      <!-- 현재 시간 -->
+       <div class="status-time">00:00</div>
+
+       <!-- 상태 아이콘 -->
+        <div class="status-icons">
+          <span class="signal">●●●</span>
+          <span class="wifi">◕</span>
+          <span class="battery">95%</span>
+        </div>
+
+     </div>
+
+    <!-- 다이내믹 아일랜드 -->
+     <div class="dynamic-island"></div>
+
+    <!-- 아이폰 화면 -->
+     <div class="screen">
+
+      <!-- 잠금 화면 -->
+       <div class="lock-screen">
+        
+        <!-- 날짜 -->
+        <div class="lock-date">10월 31일 토요일</div>
+
+       <!-- 시계 -->
+        <div class="lock-clock">00:00</div>
+
+       <!-- 하단 기능 버튼 -->
+        <div class="lock-bottom">
+
+          <button class="lock-button">
+            <span>●</span>
+          </button>
+            
+          <button class="lock-button">
+            <span>●</span>
+          </button>
+        
+        </div>
+
+       </div>
+
+      <!-- 홈 화면 -->
+       <div class="home-screen"></div>
+
+      <!-- 암호 입력 화면 -->
+       <div class="passcode-screen">
+
+        <div class="passcode-title">
+          암호 입력
+        </div>
+        
+        <div class="passcode-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="passcode-keypad">
+          <button class="number-button">1</button>
+          <button class="number-button">2</button>
+          <button class="number-button">3</button>
+
+          <button class="number-button">4</button>
+          <button class="number-button">5</button>
+          <button class="number-button">6</button>
+
+          <button class="number-button">7</button>
+          <button class="number-button">8</button>
+          <button class="number-button">9</button>
+          
+          <button class="empty"></button>
+          <button class="number-button">0</button>
+          <button class="empty"></button>
+        </div>
+
+        <div class="passcode-bottom">
+          <button>긴급상황</button>
+          <button>취소</button>
+        </div>
+
+       </div>
+       
+      <!-- 앱 화면 -->
+       <div class="app-screen"></div>
+
+     </div>
+
+    <!-- 홈 인디케이터 -->
+    <div class="home-indicator"></div>
+
+    <!-- 화면 꺼짐 상태 -->
+     <div class="screen-off"></div>
+
+  </div>
+<script src="JS/main.js"></script>
+</body>
+</html>
