@@ -137,3 +137,5 @@ function updatePasswordDots() {
 
  });
 }
+
+// 앱 실행 테스트
